@@ -1,0 +1,24 @@
+body {
+ background: #F4F4F4;
+}
+
+a:focus, a:hover {color:#bbb;}
+
+.head , .foot{
+  background-color: #658DB5;
+}
+
+.title_text{
+  font-size: 4em;
+  color: #FFF;
+}
+
+#content{
+ background: #FFF;
+ border:1px solid #658DB5;
+}
+
+#copyright{
+ text-decoration: none;
+ color: #FFF
+}
