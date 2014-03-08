@@ -1,109 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
- 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
-<head> 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-  <meta http-equiv="Content-Language" content="fr" />
+    <meta name="description" content="le site web de Calvary Chapel en France">
+    <meta name="keywords" content="eglise, protestante, evangelique, calvary, chapel, bible, jesus, enseignement">
+    <meta name="author" content="uftou">
 
-  <meta name="description" content="le site web de Calvary Chapel en France">
-  <meta name="keywords" content="eglise, protestante, evangelique, calvary, chapel, bible, jesus, enseignement"> 
-  <meta name="author" content="uftou"> 
-    
-  <title>Calvary Chapel France</title> 
-  
-  <!-- blueprintcss includes --> 
-  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" /> 
-  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" /> 
-  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
-  
-  <!-- calvarychapel.fr style include -->
-  <link rel="stylesheet" href="css/ccfrance.css" type="text/css">
-  
-</head> 
- 
-<body> 
-<!-- container ------------------------------------------------------------------------------------ -->
-<div class="container">
- 
-  <div class="span-22" id="content">
-  <!-- header ------------------------------------------------------------------------------------ -->
-    <div class="span-22 head">
-		<br />
-		<div class="prepend-3 span-21 last">
-			<div class="span-3 append-bottom"><img src='img/dove.jpg' alt='Calvary Dove' /></div><div class='title_text'>Calvary Chapel France</div>
-        </div>
-		<br />
-    </div> 
-    <hr />
+    <title>Calvary Chapel France</title>
 
-	<!-- <div class="span-22 prepend-top nav">
-	<hr />
-	</div> -->
-    
-<!-- main content ------------------------------------------------------------------------------------ -->
- 
-  	<div class="span-22 prepend-top append-bottom"> 
-	
-		<div class="span-20 prepend-1 append-bottom">
-		<div class="span-10 append-3">
-			<h3>Bienvenue</h3>
-			<p>Bienvenue sur le site de Calvary Chapel en France.
-			Vous trouverez ici les adresses des &eacute;glises Calvary Chapel en France.
-			Pour l'instant, il y en a trois: &agrave; Lyon, Nice et Paris.</p>
-			<p>Dans un futur proche nous esp&eacute;rons mettre &agrave; disposition des ressources bibliques sur ce site.
-			Revenez voir cet hiver pour profiter de ces ressources.</p>
-			<p>Que Dieu vous garde et vous b&eacute;nisse.</p>
-			<br /><br />
-		</div>
-		
-		<div class="span-8last">
-			<img src='img/carte.jpg' alt='carte de France' />
-		</div>
-		<hr />
-		</div>
-		
-		<div class="span-6 prepend-1 colborder">
-                        <h3 class='append-bottom'>Calvary Chapel Lyon</h3>
-                        <div class='append-bottom'><a href='http://www.calvarychapellyon.fr/' target="_blank">www.calvarychapellyon.fr</a></div>
-			<div class='append-bottom'>calvarychapellyon [at] gmail [point] com</div>
-			<div class='append-bottom'></div>
-			<div class='append-bottom'>07 70 71 90 00</div>
-			<div class=''></div>
-		</div> 
-		
-		<div class="span-6 colborder"> 
-			<h3 class='append-bottom'>Calvary Chapel Nice</h3>
-			<div class='append-bottom'><a href='http://www.calvarychapelnice.fr' target="_blank">www.calvarychapelnice.fr</a></div>
-			<div class='append-bottom'>ccnice [at] gmail [point] com</div>
-                        <!--<div class='append-bottom'>10 Avenue Aim&eacute; Martin<br />06200 Nice</div>--!>
-			<div class='append-bottom'>09 51 18 01 31</div>
-                        <!--<div class=''>Culte le Dimanche&nbsp;: 10h</div>-->
-			<br /><br />
-		</div>
-	
-  		<div class="span-6 last"> 
-			<h3 class='append-bottom'>Calvary Chapel Paris</h3>
-			<div class='append-bottom'><a href='http://www.calvarychapelparis.org' target="_blank">www.calvarychapelparis.org</a></div>
-			<div class='append-bottom'>calvaryparis [at] gmail [point] com</div>
-                        <!--<div class='append-bottom'>11 rue Crozatier<br />75012 Paris<br /></div>-->
-			<div class='append-bottom'>06 08 07 70 56</div>
-                        <!--<div class=''>Deux cultes le Dimanche&nbsp;:<br /> - Culte en anglais: 9h<br /> - Culte en francais: 11h</div>-->
-			<br />
-		</div> 
-   
-    </div> 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<!-- footer ------------------------------------------------------------------------------------ -->
-  	<div class="span-22 foot">
-		<hr />
-		<div class="append-bottom">
-			<center><a  id="copyright" href="http://www.uftou.com">&copy; - uftou</a></center>
-		</div>
-  	</div>
-	
-	</div>
-</div> 
-  
-</body> 
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+    <link href="css/ccfrance.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+      <div class="text-center">
+          <img src="img/dove_ccfrance.png" class="img-responsive" id="ccfrancelogo" alt="Calvary Chapel Logo" />
+          <h1 id="titre">Bienvenue sur CalvaryChapel.fr</h1>
+          <p class="lead">Ici vous trouverez la liste des différentes églises Calvary Chapel en France.</p>
+      </div>
+
+      <div>
+          <div id='map'></div>
+      </div>
+
+
+      <div class="spacer text-center" id="ccchambery">
+          <a href="#ccchambery"><span class="spacerbleu glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+      <div class="church text-center">
+          <a href="https://www.facebook.com/CalvaryChapelChambery"><h2>Calvary Chapel Chambéry</h2></a>
+          <address><span class="glyphicon glyphicon-home"></span> 2 rue Favre, Entrée B<br />73000 Chambéry</address>
+          <span class="glyphicon glyphicon-earphone"></span> 09 83 06 58 85<br />
+          <span class="glyphicon glyphicon-envelope"></span> raphink [arobase] gmail [point] com<br />
+          <span class="glyphicon glyphicon-link"></span> <a href="https://www.facebook.com/CalvaryChapelChambery">www.facebook.com/CalvaryChapelChambery</a>
+      </div>
+
+
+      <div class="spacer text-center" id="cclyon">
+          <a href="#cclyon"><span class="spacerbleu glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+      <div class="church text-center">
+          <a href='http://www.calvarychapellyon.fr/'><h2>Calvary Chapel Lyon</h2></a>
+          <address><span class="glyphicon glyphicon-home"></span> 30, rue du Général de Miribel<br />69007 Lyon</address>
+          <span class="glyphicon glyphicon-earphone"></span> 07 70 71 90 00<br />
+          <span class="glyphicon glyphicon-envelope"></span> calvarychapellyon [arobase] gmail [point] com<br />
+          <span class="glyphicon glyphicon-link"></span> <a href='http://www.calvarychapellyon.fr/'>www.calvarychapellyon.fr</a>
+      </div>
+
+
+      <div class="spacer text-center" id="ccnice">
+          <a href="#ccnice"><span class="spacerbleu glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+      <div class="church text-center">
+          <a href='http://www.calvarychapelnice.fr'><h2>Calvary Chapel Nice</h2></a>
+          <address><span class="glyphicon glyphicon-home"></span> 10 Avenue Aim&eacute; Martin<br />06200 Nice</address>
+          <span class="glyphicon glyphicon-earphone"></span> 09 51 18 01 31<br />
+          <span class="glyphicon glyphicon-envelope"></span> ccnice [arobase] gmail [point] com<br />
+          <span class="glyphicon glyphicon-link"></span> <a href='http://www.calvarychapelnice.fr'>www.calvarychapelnice.fr</a>
+      </div>
+
+
+      <div class="spacer text-center" id="ccparis">
+          <a href="#ccparis"><span class="spacerbleu glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+      <div class="church text-center">
+          <a href='http://www.calvarychapelparis.org'><h2>Calvary Chapel Paris</h2></a>
+          <address><span class="glyphicon glyphicon-home"></span> 11 rue Crozatier<br />75012 Paris<br /></address>
+          <span class="glyphicon glyphicon-earphone"></span> 06 08 07 70 56<br />
+          <span class="glyphicon glyphicon-envelope"></span> calvaryparis [arobase] gmail [point] com<br />
+          <span class="glyphicon glyphicon-link"></span> <a href='http://www.calvarychapelparis.org'>www.calvarychapelparis.org</a>
+      </div>
+
+
+      <div class="spacer text-center" id="ccworld">
+          <a href="#ccworld"><span class="spacerbleu glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+      <div class="other text-center">
+          <h2>Ailleurs dans le Monde</h2>
+          Si vous rechercher d'autres églises Calvary Chapel dans le monde,<br />
+          ou tout simplement des informations sur Calvary Chapel,<br />
+          vous pouvez regarder ces deux sites en anglais:
+          <a href="http://www.calvarychapel.com/">www.CalvaryChapel.com</a>
+          <a href="http://www.calvarychapelassociation.com/">www.CalvaryChapelAssociation.com</a>
+      </div>
+
+
+      <div class="spacer text-center">
+          <a href="#top"><span class="spacerbleu glyphicon glyphicon-chevron-up"></span></a><br /><br />
+          Calvary Chapel France - 2014
+      </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/ccfrance.js"></script>
+
+  </body>
 </html>

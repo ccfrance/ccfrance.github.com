@@ -1,24 +1,27 @@
-body {
- background: #F4F4F4;
-}
 
-a:focus, a:hover {color:#bbb;}
+  body { font-size: 24px; line-height: 38px; }
 
-.head , .foot{
-  background-color: #658DB5;
-}
+  #map { height: 600px; width: 100%; border-top: 2px solid #0055A4; border-bottom: 2px solid #0055A4; }
+  #ccfrancelogo { height: 100px; margin-top: 10px; display: inline-block; }
 
-.title_text{
-  font-size: 4em;
-  color: #FFF;
-}
+  span.spacerbleu { font-size: 40px; color: #0055A4; }
+  div.spacer { padding: 30px; }
 
-#content{
- background: #FFF;
- border:1px solid #658DB5;
-}
+  .church { }
+  .church a { color: #333; }
+  .church a:hover { color: #EF4135; text-decoration: none;}
+  .church h2 { margin-top: 0; font-size: 35px; padding-bottom: 20px;}
+  .church .glyphicon { padding-right: 20px; }
 
-#copyright{
- text-decoration: none;
- color: #FFF
+  div.other { padding: 20px 0 40px; background-color: #F2F3F0; }
+  div.other a { display: block; margin: 10px 0; color: #0055A4; }
+
+@media (max-width: 767px) {
+    body { font-size: 14px; line-height: 20px; }
+    .church h2 { font-size: 20px; padding-bottom: 10px;}
+    div#map { display: none; }
+    div.spacer { padding: 10px; }
+    span.spacerbleu { font-size: 20px; }
+    div.other { padding: 10px 0 20px; }
+    div.other h2 { font-size: 20px; }
 }
