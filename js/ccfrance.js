@@ -2,7 +2,7 @@
 var map = L.mapbox.map('map', 'uftou.hdghjjld', {zoomControl: false}).setView([46.800, 2.241], 6);
 
 // disable drag and zoom handlers
-//map.dragging.disable();
+map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
