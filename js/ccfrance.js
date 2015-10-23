@@ -84,6 +84,11 @@ var geoJson = [
 
 map.featureLayer.setGeoJSON(geoJson);
 
+geoJson.forEach(function(e) {
+  var tablerow = '<tr class="text-left"><td>' + e.properties.title + '</td><td><a href="' + e.properties.url + '">' + e.properties.url + '</a></td></tr>';
+  $('#ccliste').append(tablerow);
+});
+
 map.featureLayer.on('click', function(e) {
 
   var popupcontent = '<div class="marker-title">' + e.layer.feature.properties.title + '</div>' +
