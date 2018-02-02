@@ -71,7 +71,7 @@ var geoJson = [
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [2.382732,48.845450]
+            coordinates: [2.342940,48.853630]
         },
         properties: {
             title: 'Calvary Chapel Paris',
