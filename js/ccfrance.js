@@ -79,6 +79,19 @@ var geoJson = [
             'marker-color': '#EF4135',
             url: 'http://www.calvarychapelparis.org'
         }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [3.548162,50.335823]
+        },
+        properties: {
+            title: 'Calvary Chapel Valenciennes',
+            description: '',
+            'marker-color': '#EF4135',
+            url: 'http://www.valenciennes.cc'
+        }
     }
 ];
 
