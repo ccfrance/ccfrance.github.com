@@ -28,7 +28,7 @@ var geoJson = [
             url: 'http://calvarybourges.strikingly.com'
         }
     },
-    {
+    /*{
         type: 'Feature',
         geometry: {
             type: 'Point',
@@ -40,7 +40,7 @@ var geoJson = [
             'marker-color': '#EF4135',
             url: 'http://www.calvarychapelchambery.fr'
         }
-    },
+    },*/
     {
         type: 'Feature',
         geometry: {
