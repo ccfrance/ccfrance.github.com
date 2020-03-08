@@ -19,6 +19,19 @@ var geoJson = [
         type: 'Feature',
         geometry: {
             type: 'Point',
+            coordinates: [1.494177,49.082386]
+        },
+        properties: {
+            title: 'Église Évangélique Trouvée',
+            description: '',
+            'marker-color': '#EF4135',
+            url: 'http://trouvee.fr'
+        }
+    },
+     {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
             coordinates: [2.388368,47.079970]
         },
         properties: {
@@ -84,7 +97,7 @@ var geoJson = [
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [3.548162,50.335823]
+            coordinates: [3.518081,50.364157]
         },
         properties: {
             title: 'Calvary Chapel Valenciennes',
