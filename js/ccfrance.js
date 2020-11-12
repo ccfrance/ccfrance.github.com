@@ -1,20 +1,40 @@
 
 
+// Access Token to use MapBox tiles
+var accessToken = '';
 
+// Leaflet js : initializing map
 
-var map = L.mapbox.map('map', 'uftou.hdghjjld', {zoomControl: false, accessToken: 'pk.eyJ1IjoidWZ0b3UiLCJhIjoidlhkdWZpSSJ9.2oMvf8vHrNgcQqCexg7AtQ'});
+var ccfmap = L.map('map', {zoomControl: false }).setView([46.800, 2.241], 6);
 
-map.setView([46.800, 2.241], 6);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/outdoors-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    maxZoom: 6,
+    minZoom: 6,
+    accessToken: 'pk.eyJ1IjoidWZ0b3UiLCJhIjoidlhkdWZpSSJ9.2oMvf8vHrNgcQqCexg7AtQ'
+}).addTo(ccfmap);
+
+// Set initial view
+//ccfmap.setView([46.800, 2.241], 6);
 
 // disable drag and zoom handlers
-map.dragging.disable();
-map.touchZoom.disable();
-map.doubleClickZoom.disable();
-map.scrollWheelZoom.disable();
-// disable tap handler, if present.
-if (map.tap) map.tap.disable();
+ccfmap.dragging.disable();
+ccfmap.touchZoom.disable();
+ccfmap.doubleClickZoom.disable();
+ccfmap.scrollWheelZoom.disable();
+ccfmap.keyboard.disable();
+ccfmap.boxZoom.disable();
 
-var geoJson = [
+// disable tap handler, if present.
+if (ccfmap.tap) map.tap.disable();
+
+
+
+
+var geoJsonList = [
      {
         type: 'Feature',
         geometry: {
@@ -108,14 +128,13 @@ var geoJson = [
     }
 ];
 
-map.featureLayer.setGeoJSON(geoJson);
 
-geoJson.forEach(function(e) {
+/*geoJson.forEach(function(e) {
   var tablerow = '<tr class="text-left"><td>' + e.properties.title + '</td><td><a href="' + e.properties.url + '">' + e.properties.url + '</a></td></tr>';
   $('#ccliste').append(tablerow);
-});
+});*/
 
-map.featureLayer.on('click', function(e) {
+/*map.featureLayer.on('click', function(e) {
 
   var popupcontent = '<div class="marker-title">' + e.layer.feature.properties.title + '</div>' +
   '<a href="' + e.layer.feature.properties.url + '">Site Web -></a>';
@@ -123,4 +142,24 @@ map.featureLayer.on('click', function(e) {
   e.layer.openPopup();
 
   //location.href = e.layer.feature.properties.url;
-});
+});*/
+
+function onEachFeature(feature, layer) {
+
+    if (feature.properties.title && feature.properties.url) {
+        var tmppopupcontent = '<div class="marker-title"><strong>' + feature.properties.title + '</strong></div>' +
+  '<a href="' + feature.properties.url + '" target="_blank">Site Web -></a>';
+        layer.bindPopup(tmppopupcontent);
+
+    var tablerow = '<tr class="text-left"><td>' + feature.properties.title + '</td><td><a href="' + feature.properties.url + '">' + feature.properties.url + '</a></td></tr>';
+    $('#ccliste').append(tablerow);
+
+    }
+
+}
+
+
+var ccfLocations = L.geoJSON(false, {
+    onEachFeature: onEachFeature
+}).addTo(ccfmap);
+ccfLocations.addData(geoJsonList);
