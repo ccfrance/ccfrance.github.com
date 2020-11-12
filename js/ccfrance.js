@@ -29,7 +29,7 @@ ccfmap.keyboard.disable();
 ccfmap.boxZoom.disable();
 
 // disable tap handler, if present.
-if (ccfmap.tap) map.tap.disable();
+if (ccfmap.tap) ccfmap.tap.disable();
 
 
 
@@ -44,7 +44,6 @@ var geoJsonList = [
         properties: {
             title: 'Église Évangélique Trouvée',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://trouvee.fr'
         }
     },
@@ -57,7 +56,6 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Bourges La Chapelle',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://calvarybourges.strikingly.com'
         }
     },
@@ -83,7 +81,6 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Lyon',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://www.calvarychapellyon.fr'
         }
     },
@@ -96,7 +93,6 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Nice',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://www.calvarychapelnice.fr'
         }
     },
@@ -109,7 +105,6 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Paris',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://www.calvarychapelparis.org'
         }
     },
@@ -122,8 +117,19 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Valenciennes',
             description: '',
-            'marker-color': '#EF4135',
             url: 'http://www.valenciennes.cc'
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [-1.211280,46.162050]
+        },
+        properties: {
+            title: 'La Chapelle La Rochelle',
+            description: '',
+            url: 'https://www.lachapellelarochelle.fr'
         }
     }
 ];
