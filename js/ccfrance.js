@@ -96,7 +96,7 @@ var geoJsonList = [
             url: 'http://www.calvarychapelnice.fr'
         }
     },
-    {
+/*    {
         type: 'Feature',
         geometry: {
             type: 'Point',
@@ -107,7 +107,7 @@ var geoJsonList = [
             description: '',
             url: 'http://www.calvarychapelparis.org'
         }
-    },
+    }, */
     {
         type: 'Feature',
         geometry: {
