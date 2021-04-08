@@ -35,7 +35,7 @@ if (ccfmap.tap) ccfmap.tap.disable();
 
 
 var geoJsonList = [
-     {
+/*     {
         type: 'Feature',
         geometry: {
             type: 'Point',
@@ -46,7 +46,7 @@ var geoJsonList = [
             description: '',
             url: 'http://trouvee.fr'
         }
-    },
+    },*/
      {
         type: 'Feature',
         geometry: {
@@ -96,7 +96,7 @@ var geoJsonList = [
             url: 'http://www.calvarychapelnice.fr'
         }
     },
-/*    {
+    {
         type: 'Feature',
         geometry: {
             type: 'Point',
@@ -107,7 +107,7 @@ var geoJsonList = [
             description: '',
             url: 'http://www.calvarychapelparis.org'
         }
-    }, */
+    },
     {
         type: 'Feature',
         geometry: {
