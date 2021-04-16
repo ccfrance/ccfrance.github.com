@@ -3,36 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- HTML Meta Tags -->
     <title>Calvary Chapel France</title>
-    <meta name="description" content="Le site web de Calvary Chapel en France avec la liste des églises et &quot;implantations en cours&quot; de Calvary Chapel en France.">
-    <meta name="keywords" content="eglise, protestante, evangelique, calvary, chapel, bible, jesus, enseignement">
+    <meta name="description" content="Le site web de Calvary Chapel France avec la liste des églises et implantations en cours de Calvary Chapel en France.">
+    <meta name="keywords" content="eglise, protestante, evangelique, chretien, calvary, chapel, bible, jesus, enseignement, union, cnef">
     <meta name="author" content="uftou">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Calvary Chapel France">
-    <meta itemprop="description" content="Le site web de Calvary Chapel en France avec la liste des églises et &quot;implantations en cours&quot; de Calvary Chapel en France.">
-    <meta itemprop="image" content="http://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
+    <meta itemprop="description" content="Le site web de Calvary Chapel France avec la liste des églises et implantations en cours de Calvary Chapel en France.">
+    <meta itemprop="image" content="https://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://www.calvarychapel.fr">
+    <meta property="og:url" content="https://www.calvarychapel.fr">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Calvary Chapel France">
-    <meta property="og:description" content="Le site web de Calvary Chapel en France avec la liste des églises et &quot;implantations en cours&quot; de Calvary Chapel en France.">
-    <meta property="og:image" content="http://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
+    <meta property="og:description" content="Le site web de Calvary Chapel France avec la liste des églises et implantations en cours de Calvary Chapel en France.">
+    <meta property="og:image" content="https://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.calvarychapel.fr/">
     <meta name="twitter:title" content="Calvary Chapel France">
-    <meta name="twitter:description" content="Le site web de Calvary Chapel en France avec la liste des églises et &quot;implantations en cours&quot; de Calvary Chapel en France.">
-    <meta name="twitter:image" content="http://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
+    <meta name="twitter:description" content="Le site web de Calvary Chapel France avec la liste des églises et implantations en cours de Calvary Chapel en France.">
+    <meta name="twitter:image" content="https://www.calvarychapel.fr/img/calvarychapelfrance.jpg">
 
     <!-- Meta Tags Generated via http://heymeta.com -->
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Leaflet js for maps -->
     <link rel="stylesheet" href="css/leaflet.css">
@@ -51,59 +58,86 @@
 
   </head>
   <body>
-      <div class="text-center">
-          <img src="img/dove_ccfrance.png" class="img-responsive" id="ccfrancelogo" alt="Calvary Chapel Logo" />
-          <h1 id="titre">Bienvenue sur CalvaryChapel.fr</h1>
-          <p>Ici vous trouverez la liste des différentes églises et "implantations en cours" de Calvary Chapel en France.</p><br>
-      </div>
 
-      <div>
-          <div id='map'></div>
-      </div>
+    <!-- header ------------------------------------------------------------------------------------------ -->
+    <header>
+        <span>
+            <img src="img/dove_classic.jpg" id="logo" alt="Calvary Chapel France Logo" />
+            <h1>Calvary Chapel France</h1>
+        </span>
+        <nav>
+            <ul>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#map">Nos Églises</a></li>
+            </ul>
+        </nav>
 
-      <div class="spacer text-center topspacer">
-        <br />
-      </div>
+    </header>
 
-      <div class="text-center container">
-        <h3>La Liste</h3>
-        <br />
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1">
-            <table id="ccliste" class="table table-striped table-responsive">
-            </table>
-          </div>
-        </div>
-      </div>
+    <!-- banner img -------------------------------------------------------------------------------------- -->
+    <div id="banner">
+        <img src='img/banner.jpg' alt='Photo de la Tour Eiffel'>
+    </div>
 
-       <div class="spacer text-center">
-        <br />
-      </div>
 
-      <div class="other text-center">
-          <h3>Ailleurs dans le Monde</h3>
-          Si vous rechercher d'autres églises Calvary Chapel dans le monde,<br />
-          ou tout simplement des informations sur Calvary Chapel,<br />
-          vous pouvez regarder ces deux sites en anglais:
-          <a href="http://www.calvarychapel.com/">www.CalvaryChapel.com</a>
-          <a href="http://www.calvarychapelassociation.com/">www.CalvaryChapelAssociation.com</a>
-      </div>
+    <!-- main content ------------------------------------------------------------------------------------ -->
 
-      <div class="spacer text-center">
-          <a href="#top"><span class="spacerbleu glyphicon glyphicon-chevron-up"></span></a><br /><br />
-          Calvary Chapel France - 2020
-      </div>
+    <main>
+        <section id="apropos">
+            <h1>Bienvenue</h1>
+            <p>Bienvenue sur le site de Calvary Chapel France.</p>
+            <p>Nous vous invitons à découvrir notre association d’églises, notre identité, ainsi que nos églises membres.</p>
+            <p>Calvary Chapel France est une association au service de ses membres, qui favorise la solidarité entre eux et qui promeut les valeurs et les spécificités du mouvement Calvary Chapel.</p>
+            <p>Nous sommes une organisation non hiérarchique et non centralisée, dont les membres restent indépendants dans leur fonctionnement et qui adhérent à la même démarche fraternelle et spirituelle.</p>
+            <p>Soyez bénis !</p>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+            <h2>Confession de Foi</h2>
+            <p>Dans un avenir proche nous souhaitons mettre à disposition des articles et d'autres contenus détaillant les positions théologiques de Calvary Chapel.</p>
+            <p>Nous vous proposons déjà de consulter notre confession de foi que vous pouvez retrouver ici en format pdf:</p>
+            <p class="clink"><a href="docs/confession_de_foi.pdf">La Confession de Foi de Calvary Chapel France</a></p>
+
+            <h2>Contact</h2>
+            <p>Si vous souhaitez nous contacter, merci de nous envoyer un courriel à cette adresse:</p>
+            <p class="clink"><a href="mailto:calvarychapelfrance&#64;gmail&#46;com">calvarychapelfrance&#64;gmail&#46;com</a></p>
+
+        </section>
+
+        <div id='map'></div>
+
+        <section id="eglises">
+            <h2>Nos églises</h2>
+            <p>Voici la liste des églises et implantations en cours de Calvary Chapel en France. Nous vous invitons à consulter leurs sites webs respectifs pour avoir plus d'informations sur chacune d'entre elles.</p>
+            <ul id="ccliste">
+            </ul>
+
+            <h2>Ailleurs dans le Monde</h2>
+            <p>Si vous cherchez d'autres églises Calvary Chapel dans le monde ou tout simplement des informations sur Calvary Chapel, vous pouvez consulter ces deux sites en anglais:</p>
+            <ul>
+                <li><a href="http://www.calvarychapel.com/">CalvaryChapel.com</a></li>
+                <li><a href="http://www.calvarychapelassociation.com/">CalvaryChapelAssociation.com</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- footer ------------------------------------------------------------------------------------ -->
+
+    <footer>
+        <p>© Calvary Chapel France - 2021 | Association Culturelle N<sup>o</sup> W062017054</p>
+        <p id="credit">Photo du Trocadero par <a href="https://unsplash.com/@anikinearthwalker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dimitry Anikin</a> sur <a href="https://unsplash.com/s/photos/trocadero?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </footer>
+
+
+    <!-- scripting ------------------------------------------------------------------------------------ -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
 
     <script src="js/ccfrance.js"></script>
 
     <!-- Simple Analytics -->
-    <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-    <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
 
-  </body>
+</body>
 </html>

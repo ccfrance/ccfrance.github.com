@@ -9,7 +9,7 @@ var ccfmap = L.map('map', {zoomControl: false }).setView([46.800, 2.241], 6);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox/outdoors-v11',
+    id: 'mapbox/light-v10',
     tileSize: 512,
     zoomOffset: -1,
     maxZoom: 6,
@@ -32,21 +32,7 @@ ccfmap.boxZoom.disable();
 if (ccfmap.tap) ccfmap.tap.disable();
 
 
-
-
 var geoJsonList = [
-/*     {
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [1.494177,49.082386]
-        },
-        properties: {
-            title: 'Église Évangélique Trouvée',
-            description: '',
-            url: 'http://trouvee.fr'
-        }
-    },*/
      {
         type: 'Feature',
         geometry: {
@@ -59,19 +45,18 @@ var geoJsonList = [
             url: 'http://calvarybourges.strikingly.com'
         }
     },
-    /*{
+    {
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [5.920697, 45.567063]
+            coordinates: [-1.211280,46.162050]
         },
         properties: {
-            title: 'Calvary Chapel Chambéry',
+            title: 'La Chapelle La Rochelle',
             description: '',
-            'marker-color': '#EF4135',
-            url: 'http://www.calvarychapelchambery.fr'
+            url: 'https://www.lachapellelarochelle.fr'
         }
-    },*/
+    },
     {
         type: 'Feature',
         geometry: {
@@ -119,18 +104,6 @@ var geoJsonList = [
             description: '',
             url: 'http://www.valenciennes.cc'
         }
-    },
-    {
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [-1.211280,46.162050]
-        },
-        properties: {
-            title: 'La Chapelle La Rochelle',
-            description: '',
-            url: 'https://www.lachapellelarochelle.fr'
-        }
     }
 ];
 
@@ -157,8 +130,8 @@ function onEachFeature(feature, layer) {
   '<a href="' + feature.properties.url + '" target="_blank">Site Web -></a>';
         layer.bindPopup(tmppopupcontent);
 
-    var tablerow = '<tr class="text-left"><td>' + feature.properties.title + '</td><td><a href="' + feature.properties.url + '">' + feature.properties.url + '</a></td></tr>';
-    $('#ccliste').append(tablerow);
+    var liste = '<li><a href="' + feature.properties.url + '">' + feature.properties.title + '</a></li>';
+    $('#ccliste').append(liste);
 
     }
 
@@ -169,3 +142,54 @@ var ccfLocations = L.geoJSON(false, {
     onEachFeature: onEachFeature
 }).addTo(ccfmap);
 ccfLocations.addData(geoJsonList);
+
+$(function() {
+    /**
+    * Smooth scrolling to page anchor on click
+    **/
+    $("a[href*='#']:not([href='#'])").click(function() {
+        if (
+            location.hostname == this.hostname
+            && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
+        ) {
+            var anchor = $(this.hash);
+            anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+            if ( anchor.length ) {
+                $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
+            }
+        }
+    });
+
+});
+
+
+/* Anciennes églises:
+ * ============================================================ */
+
+    /*{
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [5.920697, 45.567063]
+        },
+        properties: {
+            title: 'Calvary Chapel Chambéry',
+            description: '',
+            'marker-color': '#EF4135',
+            url: 'http://www.calvarychapelchambery.fr'
+        }
+    },*/
+
+/*     {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [1.494177,49.082386]
+        },
+        properties: {
+            title: 'Église Évangélique Trouvée',
+            description: '',
+            url: 'http://trouvee.fr'
+        }
+    },*/
+
