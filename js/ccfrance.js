@@ -130,9 +130,8 @@ function onEachFeature(feature, layer) {
   '<a href="' + feature.properties.url + '" target="_blank">Site Web -></a>';
         layer.bindPopup(tmppopupcontent);
 
-    var liste = '<li><a href="' + feature.properties.url + '">' + feature.properties.title + '</a></li>';
-    $('#ccliste').append(liste);
-
+        var liste = '<li><a href="' + feature.properties.url + '">' + feature.properties.title + '</a></li>';
+        $('#ccliste').append(liste);
     }
 
 }
@@ -193,3 +192,45 @@ $(function() {
         }
     },*/
 
+
+
+/* Photos de première page:
+ * ============================================================= */
+
+var bannerImages = [
+    {
+        file: 'alice-triquet-unsplash.jpg',
+        author: 'Alice Triquet',
+        authorpage: 'https://unsplash.com/@alicetricky'
+    },
+    {
+        file: 'valentin-b-kremer-unsplash.jpg',
+        author: 'Valentin B. Kremer',
+        authorpage: 'https://unsplash.com/@vbk_media'
+    },
+    {
+        file: 'matthieu-joannon-unsplash.jpg',
+        author: 'Matthieu Joannon',
+        authorpage: 'https://unsplash.com/@matt_j'
+    },
+    {
+        file: 'yiwen-unsplash.jpg',
+        author: 'Yiwen',
+        authorpage: 'https://unsplash.com/@cliodile'
+    }
+];
+
+$(function() {
+    /**
+    * Set Banner Img
+    **/
+    const bannerImg = bannerImages[Math.floor(Math.random() * bannerImages.length)];
+
+    /* Set image */
+    $('#banner img').attr("src",'img/' + bannerImg.file);
+
+    /* Set image attribution at bottom of page */
+    $('#photographer').attr("href", bannerImg.authorpage);
+    $('#photographer').text(bannerImg.author);
+
+});
