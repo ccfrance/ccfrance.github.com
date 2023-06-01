@@ -92,7 +92,7 @@ var geoJsonList = [
             description: '',
             url: 'http://www.calvarychapelparis.org'
         }
-    },
+    }/*,
     {
         type: 'Feature',
         geometry: {
@@ -104,7 +104,7 @@ var geoJsonList = [
             description: '',
             url: 'http://www.valenciennes.cc'
         }
-    }
+    }*/
 ];
 
 
