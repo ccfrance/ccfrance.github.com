@@ -66,7 +66,7 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Lyon',
             description: '',
-            url: 'http://www.calvarychapellyon.fr'
+            url: 'https://calvarychapellyon.mystrikingly.com/'
         }
     },
     {
