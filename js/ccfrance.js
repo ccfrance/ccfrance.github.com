@@ -42,7 +42,7 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Bourges La Chapelle',
             description: '',
-            url: 'http://calvarybourges.strikingly.com'
+            url: 'https://calvarybourges.strikingly.com'
         }
     },
     {
@@ -66,7 +66,7 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Lyon',
             description: '',
-            url: 'https://calvarychapellyon.mystrikingly.com/'
+            url: 'https://calvarychapellyon.mystrikingly.com'
         }
     },
     {
@@ -78,7 +78,7 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Nice',
             description: '',
-            url: 'http://www.calvarychapelnice.fr'
+            url: 'https://www.ccnice.fr'
         }
     },
     {
@@ -90,7 +90,7 @@ var geoJsonList = [
         properties: {
             title: 'Calvary Chapel Paris',
             description: '',
-            url: 'http://www.calvarychapelparis.org'
+            url: 'https://www.calvarychapelparis.org'
         }
     }/*,
     {
