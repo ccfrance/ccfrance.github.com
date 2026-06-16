@@ -80,7 +80,7 @@ var geoJsonList = [
             description: '',
             url: 'https://www.ccnice.fr'
         }
-    },
+    }/*,
     {
         type: 'Feature',
         geometry: {
